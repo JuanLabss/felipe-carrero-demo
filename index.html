@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#0a0a0a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="robots" content="noindex, nofollow">
 
   <title>Felipe Carrero · Tatuador</title>
   <meta name="description" content="Black & Grey Realism · Chicano · Storytelling. Estudio privado Bogotá. Giras España · México · Perú. Agenda abierta. Cupos limitados.">
-  <meta name="robots" content="noindex, nofollow">
 
   <!-- OpenGraph para preview en WhatsApp -->
   <meta property="og:type" content="profile">
@@ -121,6 +121,37 @@
   </section>
 
   <!-- ============================================ -->
+  <!-- FEATURE PIECE · Cabeza Cráneo de pez · NEW   -->
+  <!-- Pieza signature destacada · video walk-around -->
+  <!-- ============================================ -->
+  <section class="feature" data-scene="feature">
+    <div class="feature__media">
+      <video
+        class="feature__video"
+        src="assets/new/hero-cabeza-skull.mp4"
+        poster="assets/new/hero-cabeza-skull-poster.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-label="Cráneo de pez tatuado en cabeza rapada · pieza signature blackwork"
+      ></video>
+      <div class="feature__vignette" aria-hidden="true"></div>
+    </div>
+    <div class="feature__content">
+      <p class="feature__eyebrow" data-reveal>• PIEZA SIGNATURE · NUEVO •</p>
+      <h2 class="feature__title" data-reveal data-reveal-delay="120">
+        CRÁNEO<br>EN LA<br>CABEZA
+      </h2>
+      <p class="feature__meta" data-reveal data-reveal-delay="240">
+        Blackwork · línea + sombra puntilada<br>
+        <span class="dim">Walk-around del cliente · 2026</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
   <!-- TRANSITION · Cinematic ink dispersing video  -->
   <!-- ============================================ -->
   <section class="transition" data-scene="transition" aria-hidden="true">
@@ -142,100 +173,235 @@
   </section>
 
   <!-- ============================================ -->
-  <!-- PORTFOLIO · Vertical scroll cinemático       -->
+  <!-- PORTFOLIO · 4 categorías + filtro             -->
+  <!-- v3 · estructura propuesta por Felipe (audio) -->
   <!-- ============================================ -->
   <section class="portfolio" data-scene="portfolio">
     <header class="portfolio__head">
       <p class="eyebrow" data-reveal>• PORTFOLIO •</p>
-      <h2 class="portfolio__title" data-reveal data-reveal-delay="100">PIEZAS<br>RECIENTES</h2>
+      <h2 class="portfolio__title" data-reveal data-reveal-delay="100">15<br>PIEZAS</h2>
+      <p class="portfolio__sub" data-reveal data-reveal-delay="200">
+        <span class="dim">Cuatro técnicas. Una sola gramática.</span>
+      </p>
     </header>
 
+    <nav class="filter" data-reveal aria-label="Filtrar por estilo">
+      <button class="filter__pill is-active" type="button" data-filter="all">
+        <span>Todas</span>
+        <span class="filter__count" data-count-all>15</span>
+      </button>
+      <button class="filter__pill" type="button" data-filter="minimalista">
+        <span>Minimalista</span>
+        <span class="filter__count" data-count-minimalista>0</span>
+      </button>
+      <button class="filter__pill" type="button" data-filter="blackwork">
+        <span>Blackwork</span>
+        <span class="filter__count" data-count-blackwork>3</span>
+      </button>
+      <button class="filter__pill" type="button" data-filter="black-grey">
+        <span>Black &amp; Grey</span>
+        <span class="filter__count" data-count-black-grey>5</span>
+      </button>
+      <button class="filter__pill" type="button" data-filter="chicano">
+        <span>Chicano</span>
+        <span class="filter__count" data-count-chicano>7</span>
+      </button>
+    </nav>
+
+    <p class="filter__note" data-reveal data-reveal-delay="100" data-empty-note hidden>
+      <span class="dim">Próximamente · piezas en proceso de catalogación.</span>
+    </p>
+
     <ol class="portfolio__list">
-      <li class="piece" data-piece>
+      <!-- ===== Blackwork (3) ===== -->
+      <li class="piece" data-piece data-style="blackwork">
         <figure class="piece__figure">
-          <img src="assets/grid-06-virgen.jpg" alt="Virgen llorando con corona y velas — sleeve forearm realismo" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="assets/new/IMG-3003.webp">
+            <img src="assets/new/IMG-3003.jpg" alt="Pez abisal anglerfish esqueleto — brazo blackwork dotwork" loading="lazy" decoding="async">
+          </picture>
         </figure>
         <figcaption class="piece__caption">
           <span class="piece__num">01</span>
-          <h3 class="piece__title">V I R G E N</h3>
-          <p class="piece__meta">Sleeve forearm · realizado en 🇪🇸 España · cliente devoto</p>
+          <span class="piece__style">BLACKWORK</span>
+          <h3 class="piece__title piece__title--empty" data-editable="title">—</h3>
+          <p class="piece__story" data-editable="story"><span class="dim">Historia pendiente · se llena en sesión con Felipe.</span></p>
         </figcaption>
       </li>
 
-      <li class="piece" data-piece>
+      <li class="piece" data-piece data-style="blackwork">
+        <figure class="piece__figure">
+          <picture>
+            <source type="image/webp" srcset="assets/new/IMG-3005.webp">
+            <img src="assets/new/IMG-3005.jpg" alt="Corazón anatómico dotwork — antebrazo blackwork" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">02</span>
+          <span class="piece__style">BLACKWORK</span>
+          <h3 class="piece__title piece__title--empty" data-editable="title">—</h3>
+          <p class="piece__story" data-editable="story"><span class="dim">Historia pendiente · se llena en sesión con Felipe.</span></p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="blackwork">
         <figure class="piece__figure">
           <img src="assets/grid-08-skull.jpg" alt="Skull con compass rose y rosary — sleeve completo blackwork" loading="lazy" decoding="async">
         </figure>
         <figcaption class="piece__caption">
-          <span class="piece__num">02</span>
-          <h3 class="piece__title">S K U L L</h3>
-          <p class="piece__meta">Sleeve completo blackwork · compás + rosary · Sebastian</p>
-        </figcaption>
-      </li>
-
-      <li class="piece" data-piece>
-        <figure class="piece__figure">
-          <img src="assets/grid-12-spider-man.jpg" alt="Spider-Man pantorrilla realismo 3D con efecto telaraña" loading="lazy" decoding="async">
-        </figure>
-        <figcaption class="piece__caption">
           <span class="piece__num">03</span>
-          <h3 class="piece__title">S P I D E R - M A N</h3>
-          <p class="piece__meta">Pop culture · realismo 3D pantorrilla · interpretación de su idea</p>
+          <span class="piece__style">BLACKWORK</span>
+          <h3 class="piece__title">S K U L L</h3>
+          <p class="piece__story">Sleeve completo blackwork · compás + rosary · cliente Sebastian.</p>
         </figcaption>
       </li>
 
-      <li class="piece" data-piece>
+      <!-- ===== Black & Grey (5) ===== -->
+      <li class="piece" data-piece data-style="black-grey">
         <figure class="piece__figure">
-          <img src="assets/grid-05-fu-dog.jpg" alt="Fu Dog cultura china — sleeve forearm blackwork blackandgrey" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="assets/new/IMG-3004.webp">
+            <img src="assets/new/IMG-3004.jpg" alt="Cráneo atravesado por daga con lágrimas — parte de sleeve chicano black & grey" loading="lazy" decoding="async">
+          </picture>
         </figure>
         <figcaption class="piece__caption">
           <span class="piece__num">04</span>
-          <h3 class="piece__title">F U &nbsp; D O G</h3>
-          <p class="piece__meta">Brazo conceptual · cultura china · protección + buena fortuna</p>
+          <span class="piece__style">BLACK &amp; GREY</span>
+          <h3 class="piece__title piece__title--empty" data-editable="title">—</h3>
+          <p class="piece__story" data-editable="story"><span class="dim">Historia pendiente · se llena en sesión con Felipe.</span></p>
         </figcaption>
       </li>
 
-      <li class="piece" data-piece>
+      <li class="piece" data-piece data-style="black-grey">
         <figure class="piece__figure">
-          <img src="assets/grid-09-querubin.jpg" alt="Querubín con lettering — parte de sleeve chicano completo" loading="lazy" decoding="async">
+          <img src="assets/grid-05-fu-dog.jpg" alt="Fu Dog cultura china — sleeve forearm black & grey" loading="lazy" decoding="async">
         </figure>
         <figcaption class="piece__caption">
           <span class="piece__num">05</span>
-          <h3 class="piece__title">Q U E R U B I N</h3>
-          <p class="piece__meta">Sleeve chicano completo · lettering custom · Frank</p>
+          <span class="piece__style">BLACK &amp; GREY</span>
+          <h3 class="piece__title">F U &nbsp; D O G</h3>
+          <p class="piece__story">Brazo conceptual · cultura china · protección y buena fortuna.</p>
         </figcaption>
       </li>
 
-      <li class="piece" data-piece>
+      <li class="piece" data-piece data-style="black-grey">
         <figure class="piece__figure">
-          <img src="assets/grid-03-payasa.jpg" alt="Payasa chicana con dramatic makeup — realismo black & grey" loading="lazy" decoding="async">
+          <img src="assets/grid-12-spider-man.jpg" alt="Spider-Man pantorrilla realismo 3D" loading="lazy" decoding="async">
         </figure>
         <figcaption class="piece__caption">
           <span class="piece__num">06</span>
-          <h3 class="piece__title">P A Y A S A</h3>
-          <p class="piece__meta">Chicano clásico · realismo retrato femenino</p>
+          <span class="piece__style">BLACK &amp; GREY</span>
+          <h3 class="piece__title">S P I D E R - M A N</h3>
+          <p class="piece__story">Pop culture · realismo 3D pantorrilla · interpretación de su idea.</p>
         </figcaption>
       </li>
 
-      <li class="piece" data-piece>
-        <figure class="piece__figure">
-          <img src="assets/grid-04-chicana.jpg" alt="Retrato femenino chicana — realismo black & grey" loading="lazy" decoding="async">
-        </figure>
-        <figcaption class="piece__caption">
-          <span class="piece__num">07</span>
-          <h3 class="piece__title">C H I C A N A</h3>
-          <p class="piece__meta">Retrato chicano femenino · tinta Vicecolors · Cheyenne</p>
-        </figcaption>
-      </li>
-
-      <li class="piece" data-piece>
+      <li class="piece" data-piece data-style="black-grey">
         <figure class="piece__figure">
           <img src="assets/grid-11-sweet-girl.jpg" alt="Retrato femenino realismo cicatrizado" loading="lazy" decoding="async">
         </figure>
         <figcaption class="piece__caption">
-          <span class="piece__num">08</span>
+          <span class="piece__num">07</span>
+          <span class="piece__style">BLACK &amp; GREY</span>
           <h3 class="piece__title">S W E E T &nbsp; G I R L</h3>
-          <p class="piece__meta">Realismo retrato · más del 50% cicatrizado</p>
+          <p class="piece__story">Realismo retrato · más del 50% cicatrizado.</p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="black-grey">
+        <figure class="piece__figure">
+          <img src="assets/grid-02-adelanto-santiago.jpg" alt="Adelanto Santiago — black & grey" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">08</span>
+          <span class="piece__style">BLACK &amp; GREY</span>
+          <h3 class="piece__title piece__title--empty" data-editable="title">—</h3>
+          <p class="piece__story" data-editable="story"><span class="dim">Historia pendiente · se llena en sesión con Felipe.</span></p>
+        </figcaption>
+      </li>
+
+      <!-- ===== Chicano (7) ===== -->
+      <li class="piece" data-piece data-style="chicano">
+        <figure class="piece__figure">
+          <img src="assets/grid-06-virgen.jpg" alt="Virgen llorando con corona y velas — sleeve chicano" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">09</span>
+          <span class="piece__style">CHICANO</span>
+          <h3 class="piece__title">V I R G E N</h3>
+          <p class="piece__story">Sleeve forearm · realizado en España · iconografía mariana.</p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="chicano">
+        <figure class="piece__figure">
+          <img src="assets/grid-09-querubin.jpg" alt="Querubín con lettering — sleeve chicano completo" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">10</span>
+          <span class="piece__style">CHICANO</span>
+          <h3 class="piece__title">Q U E R U B I N</h3>
+          <p class="piece__story">Sleeve chicano completo · lettering custom · cliente Frank.</p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="chicano">
+        <figure class="piece__figure">
+          <img src="assets/grid-03-payasa.jpg" alt="Payasa chicana con dramatic makeup" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">11</span>
+          <span class="piece__style">CHICANO</span>
+          <h3 class="piece__title">P A Y A S A</h3>
+          <p class="piece__story">Chicano clásico · realismo retrato femenino.</p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="chicano">
+        <figure class="piece__figure">
+          <img src="assets/grid-04-chicana.jpg" alt="Retrato femenino chicana" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">12</span>
+          <span class="piece__style">CHICANO</span>
+          <h3 class="piece__title">C H I C A N A</h3>
+          <p class="piece__story">Retrato chicano femenino · tinta Vicecolors · Cheyenne.</p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="chicano">
+        <figure class="piece__figure">
+          <img src="assets/grid-01-chicano-style.jpg" alt="Chicano style — pieza signature" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">13</span>
+          <span class="piece__style">CHICANO</span>
+          <h3 class="piece__title piece__title--empty" data-editable="title">—</h3>
+          <p class="piece__story" data-editable="story"><span class="dim">Historia pendiente · se llena en sesión con Felipe.</span></p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="chicano">
+        <figure class="piece__figure">
+          <img src="assets/grid-07-mexico-anuncio.jpg" alt="Anuncio gira México · referencia editorial chicano" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">14</span>
+          <span class="piece__style">CHICANO</span>
+          <h3 class="piece__title piece__title--empty" data-editable="title">—</h3>
+          <p class="piece__story" data-editable="story"><span class="dim">Historia pendiente · se llena en sesión con Felipe.</span></p>
+        </figcaption>
+      </li>
+
+      <li class="piece" data-piece data-style="chicano">
+        <figure class="piece__figure">
+          <img src="assets/grid-10-clown.jpg" alt="Clown chicano · retrato" loading="lazy" decoding="async">
+        </figure>
+        <figcaption class="piece__caption">
+          <span class="piece__num">15</span>
+          <span class="piece__style">CHICANO</span>
+          <h3 class="piece__title piece__title--empty" data-editable="title">—</h3>
+          <p class="piece__story" data-editable="story"><span class="dim">Historia pendiente · se llena en sesión con Felipe.</span></p>
         </figcaption>
       </li>
     </ol>
@@ -319,7 +485,7 @@
     <p class="foot__sig">• FELIPE CARRERO · TATUADOR · 🇨🇴 BOGOTÁ • PRÍVATE STUDIO • <span class="dim">2026</span> •</p>
     <p class="foot__demo">
       <span class="dim">Esta es una demo de propuesta — no es la web final.</span><br>
-      <span class="dim">v2 · 2026-06-22 · iterada post-feedback iPhone (legibilidad + asimetría brutal).</span>
+      <span class="dim">v3 · 2026-06-24 · iterada post-feedback Felipe (4 categorías + pieza signature + 15 piezas).</span>
     </p>
   </footer>
 

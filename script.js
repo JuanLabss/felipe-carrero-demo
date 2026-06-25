@@ -438,6 +438,66 @@
   }
 
   // ---------------------------------------------
+  // PORTFOLIO FILTER · v3 · 4 categorías + Todas
+  // ---------------------------------------------
+  const filter = document.querySelector('.filter');
+  const emptyNote = document.querySelector('[data-empty-note]');
+  if (filter) {
+    const pills = filter.querySelectorAll('.filter__pill');
+    const pieces = document.querySelectorAll('.portfolio__list .piece');
+
+    const applyFilter = (style) => {
+      let visibleCount = 0;
+      pieces.forEach((piece) => {
+        const pieceStyle = piece.getAttribute('data-style');
+        const matches = style === 'all' || pieceStyle === style;
+        if (matches) {
+          piece.hidden = false;
+          piece.classList.remove('is-filtering-out');
+          visibleCount++;
+        } else {
+          piece.classList.add('is-filtering-out');
+          setTimeout(() => { piece.hidden = true; }, 280);
+        }
+      });
+      // Empty-state note (e.g. "Minimalista" tiene 0 piezas)
+      if (emptyNote) {
+        emptyNote.hidden = visibleCount !== 0;
+      }
+      // Refresh ScrollTrigger after layout change
+      if (window.ScrollTrigger) {
+        setTimeout(() => window.ScrollTrigger.refresh(), 320);
+      }
+    };
+
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const style = pill.getAttribute('data-filter');
+        pills.forEach((p) => p.classList.remove('is-active'));
+        pill.classList.add('is-active');
+        applyFilter(style);
+      });
+    });
+  }
+
+  // ---------------------------------------------
+  // FEATURE PIECE · v3 · pause video off-viewport
+  // ---------------------------------------------
+  const featureVideo = document.querySelector('.feature__video');
+  if (featureVideo && 'IntersectionObserver' in window) {
+    const featureObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          featureVideo.play().catch(() => {});
+        } else {
+          featureVideo.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+    featureObserver.observe(featureVideo);
+  }
+
+  // ---------------------------------------------
   // Hint console (for Juan dev) — solo en localhost
   // ---------------------------------------------
   if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
