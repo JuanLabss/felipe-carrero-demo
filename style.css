@@ -18,9 +18,9 @@
   /* Acento único opcional · sangre seca */
   --blood:      oklch(0.32 0.180 25);
 
-  /* Fonts */
-  --font-display: 'Anton', 'Bebas Neue', 'Helvetica Neue', sans-serif;
-  --font-serif:   'DM Serif Display', 'Cormorant Garamond', Georgia, serif;
+  /* Fonts · v4 alineadas al wordmark editorial de Felipe (serif clásico tracking amplio) */
+  --font-display: 'Cinzel', 'Trajan Pro', 'Cormorant SC', serif;
+  --font-serif:   'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Geist', 'Inter Tight', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', 'Geist Mono', Consolas, monospace;
 
@@ -76,7 +76,7 @@ ol, ul { list-style: none; }
 /* ================================================================
    UTILITIES
    ================================================================ */
-.dim { color: var(--medium); }
+.dim { color: var(--highlight); opacity: 0.72; } /* v4: bump contrast for WCAG AA */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--fs-eyebrow);
@@ -329,15 +329,16 @@ section { transition: opacity 0.6s var(--ease-out-cinematic); }
 }
 .wordmark {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 22vw, 10rem);
+  font-size: clamp(3.5rem, 18vw, 8rem);
   line-height: 0.84;
-  letter-spacing: -0.045em;
+  letter-spacing: 0.04em;
   color: var(--bone);
   margin-bottom: var(--space-4);
   text-transform: uppercase;
   max-width: 100%;
   word-break: keep-all;
   overflow-wrap: normal;
+  font-weight: 600;
 }
 .wordmark__line {
   display: block;
@@ -345,6 +346,32 @@ section { transition: opacity 0.6s var(--ease-out-cinematic); }
 .wordmark__line:nth-child(2) {
   padding-left: 0.6em;
 }
+
+/* v4: wordmark-as-logo (Felipe's gothic-chicano F monogram) */
+.wordmark--logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-align: left;
+}
+.wordmark__logo {
+  display: block;
+  width: clamp(220px, 56vw, 440px);
+  height: auto;
+  filter: drop-shadow(0 4px 28px oklch(0.04 0 0 / 0.65));
+  margin: 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
 .wordmark,
 .lede {
   text-shadow:
@@ -361,6 +388,23 @@ section { transition: opacity 0.6s var(--ease-out-cinematic); }
   margin-top: var(--space-4);
 }
 .lede em { font-style: italic; color: var(--skin); }
+
+/* v4: lede-as-wordmark (Felipe's editorial "FELIPE CARRERO · TATUADOR" serif lockup) */
+.lede--wordmark {
+  text-shadow: none;
+  max-width: 100%;
+  margin-top: var(--space-3);
+  padding: 0;
+}
+.lede__wordmark {
+  display: block;
+  width: clamp(200px, 52vw, 360px);
+  height: auto;
+  filter: drop-shadow(0 2px 14px oklch(0.04 0 0 / 0.6));
+  opacity: 0.92;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 .hero__footer {
   display: grid;
@@ -746,11 +790,12 @@ section { transition: opacity 0.6s var(--ease-out-cinematic); }
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.18em;
-  color: var(--medium);
+  color: var(--paper); /* v4: bump for WCAG AA */
   text-transform: uppercase;
   margin-bottom: var(--space-6);
   line-height: 1.6;
 }
+.foot__sig .dim { color: var(--paper); opacity: 0.85; } /* override: avoid contrast trap inside foot__sig */
 .foot__demo {
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -1109,7 +1154,7 @@ section { transition: opacity 0.6s var(--ease-out-cinematic); }
   font-size: 0.65rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--medium);
+  color: var(--paper); /* v4: bump from --medium for WCAG AA contrast */
   margin-top: var(--space-1);
   margin-bottom: var(--space-3);
 }

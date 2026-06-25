@@ -20,10 +20,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+SC:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='20' font-weight='900' text-anchor='middle' fill='%23f3ede8' dy='.3em'%3EFC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="assets/brand/felipe-favicon.png">
 </head>
 <body class="loading">
 
@@ -66,13 +66,12 @@
       </div>
 
       <div class="hero__title">
-        <h1 class="wordmark" data-reveal data-reveal-delay="120">
-          <span class="wordmark__line">FELIPE</span>
-          <span class="wordmark__line">CARRERO</span>
+        <h1 class="wordmark wordmark--logo" data-reveal data-reveal-delay="120">
+          <img class="wordmark__logo" src="assets/brand/felipe-logo-mono-tight.png" alt="" width="485" height="629" loading="eager" decoding="async">
+          <span class="sr-only">FELIPE CARRERO</span>
         </h1>
-        <p class="lede" data-reveal data-reveal-delay="280">
-          Black &amp; Grey Realism<br>
-          <em>Chicano · Storytelling</em>
+        <p class="lede lede--wordmark" data-reveal data-reveal-delay="280">
+          <img class="lede__wordmark" src="assets/brand/felipe-wordmark-tight.png" alt="Felipe Carrero · Tatuador" width="460" height="87" loading="eager" decoding="async">
         </p>
       </div>
 
@@ -186,23 +185,23 @@
     </header>
 
     <nav class="filter" data-reveal aria-label="Filtrar por estilo">
-      <button class="filter__pill is-active" type="button" data-filter="all">
+      <button class="filter__pill is-active" type="button" data-filter="all" aria-label="Mostrar todas las piezas">
         <span>Todas</span>
         <span class="filter__count" data-count-all>15</span>
       </button>
-      <button class="filter__pill" type="button" data-filter="minimalista">
+      <button class="filter__pill" type="button" data-filter="minimalista" aria-label="Filtrar por estilo Minimalista">
         <span>Minimalista</span>
         <span class="filter__count" data-count-minimalista>0</span>
       </button>
-      <button class="filter__pill" type="button" data-filter="blackwork">
+      <button class="filter__pill" type="button" data-filter="blackwork" aria-label="Filtrar por estilo Blackwork">
         <span>Blackwork</span>
         <span class="filter__count" data-count-blackwork>3</span>
       </button>
-      <button class="filter__pill" type="button" data-filter="black-grey">
+      <button class="filter__pill" type="button" data-filter="black-grey" aria-label="Filtrar por estilo Black and Grey">
         <span>Black &amp; Grey</span>
         <span class="filter__count" data-count-black-grey>5</span>
       </button>
-      <button class="filter__pill" type="button" data-filter="chicano">
+      <button class="filter__pill" type="button" data-filter="chicano" aria-label="Filtrar por estilo Chicano">
         <span>Chicano</span>
         <span class="filter__count" data-count-chicano>7</span>
       </button>
@@ -421,7 +420,7 @@
       </p>
     </header>
 
-    <ul class="tours__list" role="list">
+    <ul class="tours__list" role="list" tabindex="0" aria-label="Lista de giras internacionales">
       <li class="tour" data-piece>
         <div class="tour__inner">
           <span class="tour__flag">🇨🇴</span>
@@ -485,7 +484,7 @@
     <p class="foot__sig">• FELIPE CARRERO · TATUADOR · 🇨🇴 BOGOTÁ • PRÍVATE STUDIO • <span class="dim">2026</span> •</p>
     <p class="foot__demo">
       <span class="dim">Esta es una demo de propuesta — no es la web final.</span><br>
-      <span class="dim">v3 · 2026-06-24 · iterada post-feedback Felipe (4 categorías + pieza signature + 15 piezas).</span>
+      <span class="dim">v4 · 2026-06-24 · logo F + wordmark + tipografía Felipe integrados (Cinzel + Cormorant SC).</span>
     </p>
   </footer>
 
